@@ -1,6 +1,5 @@
 <Solution>
   <Folder Name="/src/">
-    <Project Path="src/Solster.Blazor.Templating.PreMailer/Solster.Blazor.Templating.PreMailer.csproj" />
     <Project Path="src/Solster.Blazor.Templating/Solster.Blazor.Templating.csproj" />
   </Folder>
   <Folder Name="/tests/">

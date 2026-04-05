@@ -24,7 +24,6 @@
 
   <ItemGroup>
     <ProjectReference Include="../../src/Solster.Blazor.Templating/Solster.Blazor.Templating.csproj" />
-    <ProjectReference Include="../../src/Solster.Blazor.Templating.PreMailer/Solster.Blazor.Templating.PreMailer.csproj" />
   </ItemGroup>
 
 </Project>

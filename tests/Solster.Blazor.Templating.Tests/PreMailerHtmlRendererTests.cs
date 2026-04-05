@@ -1,5 +1,4 @@
 using Microsoft.Extensions.DependencyInjection;
-using Solster.Blazor.Templating.PreMailer;
 using Solster.Blazor.Templating.Tests.Components;
 
 namespace Solster.Blazor.Templating.Tests;
@@ -12,16 +11,16 @@ public sealed class PreMailerHtmlRendererTests
         new ServiceCollection().BuildServiceProvider();
 
     [Fact]
-    public async Task RenderAsync_TypedComponent_InlinesCssByDefault()
+    public async Task RenderAsync_TypedComponent_InlinesCssWhenInlineCssTrue()
     {
         var sp = BuildServiceProvider();
         var inner = new HtmlRenderer(sp);
         var renderer = new PreMailerHtmlRenderer(inner, DummyBaseUri);
 
-        var html = await renderer.RenderAsync<StyledComponent, CssModel>(new CssModel("My Title"));
+        var html = await renderer.RenderAsync<StyledComponent, CssModel>(new CssModel("My Title"), inlineCss: true);
 
         html.Should().Contain("My Title");
-        // CSS inlining is on by default — styles are applied as inline attributes
+        // CSS inlined — styles are applied as inline attributes on elements
         html.Should().Contain("style=");
     }
 
@@ -40,7 +39,7 @@ public sealed class PreMailerHtmlRendererTests
     }
 
     [Fact]
-    public async Task RenderAsync_ParameterlessComponent_InlinesCssByDefault()
+    public async Task RenderAsync_ParameterlessComponent_DoesNotInlineCssByDefault()
     {
         var sp = BuildServiceProvider();
         var inner = new HtmlRenderer(sp);

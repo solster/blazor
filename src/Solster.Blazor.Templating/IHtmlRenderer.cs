@@ -11,19 +11,19 @@ public interface IHtmlRenderer
     /// Renders <typeparamref name="TComponent"/> with the given <paramref name="model"/> to an HTML string.
     /// </summary>
     /// <param name="inlineCss">
-    /// When <see langword="true"/> (the default), CSS is inlined into the HTML if the renderer supports it.
-    /// Pass <see langword="false"/> to skip CSS inlining for this call.
+    /// When <see langword="true"/>, CSS is inlined into the HTML if the renderer supports it.
+    /// Defaults to <see langword="false"/>.
     /// </param>
-    Task<String> RenderAsync<TComponent, TModel>(TModel model, bool inlineCss = true)
+    Task<String> RenderAsync<TComponent, TModel>(TModel model, bool inlineCss = false)
         where TComponent : IHtmlTemplate<TModel>;
 
     /// <summary>
     /// Renders <typeparamref name="TComponent"/> with no model (for parameter-less templates).
     /// </summary>
     /// <param name="inlineCss">
-    /// When <see langword="true"/> (the default), CSS is inlined into the HTML if the renderer supports it.
-    /// Pass <see langword="false"/> to skip CSS inlining for this call.
+    /// When <see langword="true"/>, CSS is inlined into the HTML if the renderer supports it.
+    /// Defaults to <see langword="false"/>.
     /// </param>
-    Task<String> RenderAsync<TComponent>(bool inlineCss = true)
+    Task<String> RenderAsync<TComponent>(bool inlineCss = false)
         where TComponent : IComponent;
 }
