@@ -32,6 +32,18 @@ public sealed class HtmlRendererTests
     }
 
     [Fact]
+    public async Task RenderAsync_DictionaryParameters_RendersModelData()
+    {
+        var sp = BuildServiceProvider();
+        var renderer = new HtmlRenderer(sp, NullLoggerFactory.Instance);
+
+        var parameters = new Dictionary<String, Object?> { ["Model"] = new GreetingModel("Charlie") };
+        var html = await renderer.RenderAsync<GreetingComponent>(parameters);
+
+        html.Should().Contain("Charlie");
+    }
+
+    [Fact]
     public async Task RenderAsync_TypedComponent_DoesNotContainOtherName()
     {
         var sp = BuildServiceProvider();
