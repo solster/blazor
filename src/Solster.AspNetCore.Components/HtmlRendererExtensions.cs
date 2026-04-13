@@ -1,7 +1,6 @@
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 
-namespace Solster.AspNetCore.Components;
+// ReSharper disable once CheckNamespace
+namespace Microsoft.AspNetCore.Components.Web;
 
 public static class HtmlRendererExtensions
 {
@@ -22,7 +21,7 @@ public static class HtmlRendererExtensions
 
             return renderer.RenderAsync(componentType, parameters);
         }
-
+        
         /// <summary>
         /// Renders the component identified by <paramref name="componentType"/> with the given
         /// <paramref name="parameters"/> dictionary to an HTML string.

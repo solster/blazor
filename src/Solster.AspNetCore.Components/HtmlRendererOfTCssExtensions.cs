@@ -1,6 +1,6 @@
-using Microsoft.AspNetCore.Components.Web;
 
-namespace Solster.AspNetCore.Components;
+// ReSharper disable once CheckNamespace
+namespace Microsoft.AspNetCore.Components.Web;
 
 public static class HtmlRendererOfTCssExtensions
 {

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Solster.AspNetCore.Components.Templating</AssemblyName>
+    <RootNamespace>Solster.AspNetCore.Components.Templating</RootNamespace>
+    <PackageId>Solster.AspNetCore.Components.Templating</PackageId>
+    <Authors>Solster</Authors>
+    <Description>Template name resolution and string-based HTML rendering extensions for Solster.AspNetCore.Components.</Description>
+    <RepositoryUrl>https://github.com/solster/aspnetcore</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Solster.AspNetCore.Components/Solster.AspNetCore.Components.csproj" />
+  </ItemGroup>
+
+</Project>
+

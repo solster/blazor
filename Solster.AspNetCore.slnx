@@ -1,8 +1,10 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/Solster.AspNetCore.Components/Solster.AspNetCore.Components.csproj" />
+    <Project Path="src/Solster.AspNetCore.Components.Templating/Solster.AspNetCore.Components.Templating.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/Solster.AspNetCore.Components.Tests/Solster.AspNetCore.Components.Tests.csproj" />
+    <Project Path="tests/Solster.AspNetCore.Components.Templating.Tests/Solster.AspNetCore.Components.Templating.Tests.csproj" />
   </Folder>
 </Solution>

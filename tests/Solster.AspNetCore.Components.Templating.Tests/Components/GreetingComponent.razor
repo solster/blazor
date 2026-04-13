@@ -1,0 +1,9 @@
+@namespace Solster.AspNetCore.Components.Templating.Tests.Components
+
+<p>Hello, @Model.Name!</p>
+
+@code {
+    [Parameter, EditorRequired]
+    public required GreetingModel Model { get; set; }
+}
+
